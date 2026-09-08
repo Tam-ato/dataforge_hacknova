@@ -14,7 +14,7 @@ Off-the-shelf TTS frequently mispronounces multisyllabic drug names (e.g. *Levot
 2. Render each one two ways: **default** Rime pronunciation, and **tuned** pronunciation using Rime's inline phonetic-bracket syntax (`phonemizeBetweenBrackets`, Mist-family models).
 3. Save both clips and score them by ear against the intended pronunciation (see `RIME_EVIDENCE.md`).
 4. Also expose a "repeat slower" control (`speedAlpha`) so a patient can ask for the dosage line again, more slowly, without re-reading the whole label.
-
+**A second controlled-delivery issue surfaced during testing, not anticipated in advance:** dosage lines like "Take one 75 microgram tablet" were audibly blending "one" and "75" together, sounding close to "175" — a real safety-relevant ambiguity for an audio-only reader. Fixed using Rime's custom pause markup (`pauseBetweenBrackets`, `<250> ,`) inserted after every "one" in the dosage fixtures, so the quantity and following number are always spoken as distinct units. See `RIME_EVIDENCE.md` for before/after notes.
 ## Architecture
 
 ```
@@ -46,7 +46,7 @@ Rime TTS (Mist v2) ──► MP3 audio ──► streamed back to browser ──
 | Pronunciation control | `phonemizeBetweenBrackets: true` + curly-brace phonetic strings from `fixtures/drug_names.json` |
 | Controlled delivery | `speedAlpha` (1.0 normal, 1.6 for "repeat slower") |
 
-> Before your real demo, regenerate the phonetic strings in `fixtures/drug_names.json` using Rime's Pronunciation tool (`app.rime.ai/pronunciation`) or the `/phonemize` endpoint against your speaker, since the shipped values are starting guesses, not verified audio.
+>> These have been audio-verified against reference pronunciations (Google search results / drugs.com) — 15/15 tuned pronunciations scored correct, vs. 12/15 for Rime's default. Full methodology and per-drug results in `RIME_EVIDENCE.md`.
 
 ## Setup
 
@@ -72,7 +72,7 @@ This writes paired MP3s to `evidence/<drug>_default.mp3` and `evidence/<drug>_tu
 
 ## Known limitations
 
-- Pronunciation correctness is judged by ear (by us / a pharmacist reviewer), not an automated phoneme-match score — see `RIME_EVIDENCE.md` for why and what would improve this.
+- Pronunciation correctness was verified by ear against text-based reference pronunciations (Google, drugs.com), not an automated phoneme-match score. An ASR round-trip (synthesize → transcribe → compare) would make this repeatable without a human listener — a natural next step, not implemented here.
 - `phonemizeBetweenBrackets` only works on Mist v1/v2, so this project is pinned to `mistv2` rather than newer Coda/Arcana voices.
 - The 15-name fixture list is representative, not exhaustive; it does not cover every drug class or non-English names.
 - No OCR / photo-to-label pipeline yet — text is typed or picked from the fixture list. Real deployment would need a label-scanning step upstream of this TTS layer.

@@ -71,7 +71,7 @@ async function speakAndPlay(text, tuned, speedAlpha, targetPlayer) {
     const res = await fetch('/api/speak', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, tuned, speedAlpha }),
+      body: JSON.stringify({ text, tuned, speedAlpha, pauseBetweenBrackets: true }),
     });
 
     if (!res.ok) {

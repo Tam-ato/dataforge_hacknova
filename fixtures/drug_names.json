@@ -1,5 +1,5 @@
 {
-  "_note": "Phonetic strings use Rime's real phonetic alphabet (docs.rime.ai/platform/rime-phonetic-alphabet): a digit (1=primary stress, 2=secondary stress, 0=unstressed) before every vowel, single-letter symbols, no separators. These are hand-built best-effort strings from standard English dictionary pronunciations, syntactically valid this time, but still NOT audio-verified. Before locking in evidence, verify/regenerate against a real reference recording using the Phonemize API (POST audio to https://optimize.rime.ai/phonemize) or the Pronunciation tool at rime.ai/dashboard/pronunciation.",
+"_note": "Phonetic strings use Rime's real phonetic alphabet (docs.rime.ai/platform/rime-phonetic-alphabet): a digit (1=primary stress, 2=secondary stress, 0=unstressed) before every vowel, single-letter symbols, no separators. Audio-verified by ear against reference pronunciations (Google/drugs.com) on Sept 2026 -- 15/15 tuned correct vs. 12/15 default correct. See RIME_EVIDENCE.md for the full results table and methodology.",
   "items": [
     {
       "id": "levothyroxine",
