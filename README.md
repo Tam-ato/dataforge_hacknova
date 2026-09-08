@@ -1,3 +1,4 @@
+
 # RxSpeak
 
 A prescription-label voice reader for **low-vision and blind patients**, and for **pharmacists whose hands and eyes are busy** filling orders. Rime-generated speech is the primary and only output of the core flow — there is no visual fallback for reading the label; if you remove speech, the product is gone.
@@ -81,3 +82,5 @@ This writes paired MP3s to `evidence/<drug>_default.mp3` and `evidence/<drug>_tu
 
 - Rime TTS API (`users.rime.ai`) — primary and required.
 - Browser `speechSynthesis` — visible fallback only, not used in the judged happy path.
+
+# dataforge_hacknova
