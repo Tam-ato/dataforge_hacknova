@@ -1,4 +1,4 @@
-Demo Video -[https://drive.google.com/file/d/17fIyOc9XPNLTVZ25y4ZLFw73FO0jGARE/view?usp=sharing]
+Demo Video -[https://drive.google.com/file/d/12TAR6GDyYHJH3t-868frJHV6dnQXAsZh/view?usp=sharing]
 # RxSpeak
 
 A prescription-label voice reader for **low-vision and blind patients**, and for **pharmacists whose hands and eyes are busy** filling orders. Rime-generated speech is the primary and only output of the core flow — there is no visual fallback for reading the label; if you remove speech, the product is gone.
