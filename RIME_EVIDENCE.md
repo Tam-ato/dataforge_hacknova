@@ -52,26 +52,26 @@ _Paste the table printed by `npm run coverage` here._
 
 _Fill in after running the listening test. Do not report this as final until it's actually been listened to — unverified numbers get no credit under the eligibility rules._
 
-| Drug name | Default correct? | Tuned correct? | Notes |
+| Drug name | Tuned correct? | Default correct? | Notes |
 |---|---|---|---|
-| Levothyroxine | | | |
-| Atorvastatin | | | |
-| Hydroxyzine | | | |
-| Clonazepam | | | |
-| Montelukast | | | |
-| Escitalopram | | | |
-| Levetiracetam | | | |
-| Dicyclomine | | | |
-| Pantoprazole | | | |
-| Rosuvastatin | | | |
-| Buspirone | | | |
-| Quetiapine | | | |
-| Duloxetine | | | |
-| Cyclobenzaprine | | | |
-| Amlodipine | | | |
+| Levothyroxine | yes |yes | ending is slightly off|
+| Atorvastatin |yes |yes |the ending doesn't have the 'n' sound |
+| Hydroxyzine |yes |yes | |
+| Clonazepam | yes|yes |the speed of the audio is invoking slight hearing changes |
+| Montelukast | yes| yes|the ending emphasis is sounding flat |
+| Escitalopram |yes |yes | |
+| Levetiracetam |yes |mostly |empphasis on the different syllables |
+| Dicyclomine |yes |yes |the ending emphasis is too strong |
+| Pantoprazole | yes| yes| |
+| Rosuvastatin |yes |mostly | emphasis on the different syllables|
+| Buspirone |yes|mostly |emphasis on the different syllables |
+| Quetiapine |yes |yes | |
+| Duloxetine | yes|yes | |
+| Cyclobenzaprine | yes|yes | |
+| Amlodipine |yes |yes | |
 
-**Default correct: __ / 15**
-**Tuned correct: __ / 15**
+**Default correct: 12 / 15**(3 are 50% correct)
+**Tuned correct: 15 / 15**
 
 ## Repeat-slower check
 
