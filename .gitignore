@@ -1,0 +1,5 @@
+node_modules/
+.env
+evidence/*.mp3
+*.log
+.DS_Store

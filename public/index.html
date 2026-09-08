@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RxSpeak — Prescription Voice Reader</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>RxSpeak</h1>
+    <p class="tagline">A prescription label reader for low-vision patients and hands-busy pharmacists. Rime reads every label aloud.</p>
+    <div id="providerBadge" class="badge">checking speech provider…</div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>1. Pick or type a prescription</h2>
+      <label for="rxSelect">Sample prescriptions (hard drug names)</label>
+      <select id="rxSelect"></select>
+
+      <label for="drugName">Drug name</label>
+      <input id="drugName" type="text" />
+
+      <label for="instructions">Dosage &amp; instructions</label>
+      <textarea id="instructions" rows="3"></textarea>
+
+      <div class="toggle-row">
+        <label>
+          <input type="checkbox" id="tunedToggle" checked />
+          Use tuned pronunciation (Rime phonetic hint)
+        </label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>2. Listen</h2>
+      <div class="button-row">
+        <button id="playBtn">▶ Read prescription</button>
+        <button id="repeatSlowBtn">⏸ Repeat slower</button>
+      </div>
+      <audio id="player" controls></audio>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>3. Stress test: default vs tuned pronunciation</h2>
+      <p>Same drug name, two renders — with and without the pronunciation hint. This is the acceptance test used in <code>RIME_EVIDENCE.md</code>.</p>
+      <div class="button-row">
+        <button id="playDefaultBtn">▶ Default Rime pronunciation</button>
+        <button id="playTunedBtn">▶ Tuned pronunciation</button>
+      </div>
+      <audio id="comparePlayer" controls></audio>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footerNote">Speech provider: <span id="footerProvider">—</span></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

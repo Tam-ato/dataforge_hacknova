@@ -1,0 +1,95 @@
+{
+  "_note": "Phonetic strings use the Rime phonetic alphabet (curly-brace syntax, phonemizeBetweenBrackets:true, Mist-family models only). These are STARTING GUESSES for the demo — before recording real evidence, regenerate/verify each one with Rime's Pronunciation tool (app.rime.ai/pronunciation) or the /phonemize endpoint against a real pharmacist/reference recording, then paste the verified string back in here.",
+  "items": [
+    {
+      "id": "levothyroxine",
+      "plain_text": "Levothyroxine",
+      "tuned_text": "{lE.vO.TIY.rOk.sEn}",
+      "dosage_example": "Take one 75 microgram tablet by mouth every morning on an empty stomach."
+    },
+    {
+      "id": "atorvastatin",
+      "plain_text": "Atorvastatin",
+      "tuned_text": "{a.tOr.vA.stA.tIn}",
+      "dosage_example": "Take one 20 milligram tablet by mouth once daily in the evening."
+    },
+    {
+      "id": "hydroxyzine",
+      "plain_text": "Hydroxyzine",
+      "tuned_text": "{hI.drA.ksI.zEn}",
+      "dosage_example": "Take one 25 milligram tablet by mouth every 6 hours as needed for itching."
+    },
+    {
+      "id": "clonazepam",
+      "plain_text": "Clonazepam",
+      "tuned_text": "{klO.nA.zE.pam}",
+      "dosage_example": "Take one 0.5 milligram tablet by mouth twice daily."
+    },
+    {
+      "id": "montelukast",
+      "plain_text": "Montelukast",
+      "tuned_text": "{mAn.tE.lU.kast}",
+      "dosage_example": "Take one 10 milligram tablet by mouth once daily at bedtime."
+    },
+    {
+      "id": "escitalopram",
+      "plain_text": "Escitalopram",
+      "tuned_text": "{es.sI.tA.lO.pram}",
+      "dosage_example": "Take one 10 milligram tablet by mouth once daily."
+    },
+    {
+      "id": "levetiracetam",
+      "plain_text": "Levetiracetam",
+      "tuned_text": "{lE.vE.tI.rA.sE.tam}",
+      "dosage_example": "Take one 500 milligram tablet by mouth twice daily."
+    },
+    {
+      "id": "dicyclomine",
+      "plain_text": "Dicyclomine",
+      "tuned_text": "{dI.sIk.lO.mEn}",
+      "dosage_example": "Take one 20 milligram tablet by mouth four times daily before meals."
+    },
+    {
+      "id": "pantoprazole",
+      "plain_text": "Pantoprazole",
+      "tuned_text": "{pan.tO.prA.zOl}",
+      "dosage_example": "Take one 40 milligram tablet by mouth once daily before breakfast."
+    },
+    {
+      "id": "rosuvastatin",
+      "plain_text": "Rosuvastatin",
+      "tuned_text": "{rO.sU.vA.stA.tIn}",
+      "dosage_example": "Take one 10 milligram tablet by mouth once daily."
+    },
+    {
+      "id": "buspirone",
+      "plain_text": "Buspirone",
+      "tuned_text": "{bU.spI.rOn}",
+      "dosage_example": "Take one 15 milligram tablet by mouth twice daily."
+    },
+    {
+      "id": "quetiapine",
+      "plain_text": "Quetiapine",
+      "tuned_text": "{kwE.tI.a.pEn}",
+      "dosage_example": "Take one 50 milligram tablet by mouth at bedtime."
+    },
+    {
+      "id": "duloxetine",
+      "plain_text": "Duloxetine",
+      "tuned_text": "{dU.lAk.sE.tEn}",
+      "dosage_example": "Take one 30 milligram capsule by mouth once daily."
+    },
+    {
+      "id": "cyclobenzaprine",
+      "plain_text": "Cyclobenzaprine",
+      "tuned_text": "{sI.klO.ben.zA.prEn}",
+      "dosage_example": "Take one 10 milligram tablet by mouth three times daily as needed."
+    },
+    {
+      "id": "amlodipine",
+      "plain_text": "Amlodipine",
+      "tuned_text": "{am.lO.dI.pEn}",
+      "dosage_example": "Take one 5 milligram tablet by mouth once daily."
+    }
+  ]
+}
