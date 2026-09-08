@@ -28,7 +28,7 @@ async function loadFixtures() {
 function selectFixture(i) {
   currentFixture = fixtures[i];
   drugName.value = currentFixture.plain_text;
-  instructions.value = currentFixture.dosage_example;
+  instructions.value = currentFixture.dosage_example; // clean text shown on screen
 }
 
 rxSelect.addEventListener('change', (e) => selectFixture(Number(e.target.value)));
@@ -56,13 +56,15 @@ async function refreshProviderBadge() {
   }
 }
 
-// Builds the utterance text. When "tuned" is on, we substitute the drug
-// name for its curly-brace phonetic string so Rime's phonemizeBetweenBrackets
-// path is exercised; instructions are spoken plainly (Rime's normalizer
-// handles numbers/dosages on its own).
+// Builds the utterance text sent to Rime. Uses the display text by default,
+// but swaps in dosage_speech (which carries the <ms> pause markup) when the
+// current fixture provides one, so the pause syntax is heard, never seen.
 function buildUtterance(tuned) {
   const name = tuned && currentFixture ? currentFixture.tuned_text : drugName.value;
-  return `${name}. ${instructions.value}`;
+  const spokenInstructions = currentFixture && currentFixture.dosage_speech
+    ? currentFixture.dosage_speech
+    : instructions.value;
+  return `${name}. ${spokenInstructions}`;
 }
 
 async function speakAndPlay(text, tuned, speedAlpha, targetPlayer) {
