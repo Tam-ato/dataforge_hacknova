@@ -77,8 +77,8 @@ _Fill in after running the listening test. Do not report this as final until it'
 
 | Speed | Clip | Intelligible? | Notes |
 |---|---|---|---|
-| 1.0 (normal) | evidence/<dosage>_1x.mp3 | | |
-| 1.6 (slower) | evidence/<dosage>_slow.mp3 | | |
+| 1.0 (normal) | evidence/<dosage>_1x.mp3 |yes | pauses have been rendered with comma placement in dosage instructions |
+| 1.6 (slower) | evidence/<dosage>_slow.mp3 |yes | dynamic pause lengths or syllable cadence remain natural|
 
 ## Limitations
 
