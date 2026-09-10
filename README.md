@@ -1,5 +1,6 @@
-Demo Video -[https://drive.google.com/file/d/12TAR6GDyYHJH3t-868frJHV6dnQXAsZh/view?usp=sharing]
 # RxSpeak
+
+🎥 **Demo video:** https://drive.google.com/file/d/12TAR6GDyYHJH3t-868frJHV6dnQXAsZh/view?usp=sharing
 
 A prescription-label voice reader for **low-vision and blind patients**, and for **pharmacists whose hands and eyes are busy** filling orders. Rime-generated speech is the primary and only output of the core flow — there is no visual fallback for reading the label; if you remove speech, the product is gone.
 
@@ -14,7 +15,9 @@ Off-the-shelf TTS frequently mispronounces multisyllabic drug names (e.g. *Levot
 2. Render each one two ways: **default** Rime pronunciation, and **tuned** pronunciation using Rime's inline phonetic-bracket syntax (`phonemizeBetweenBrackets`, Mist-family models).
 3. Save both clips and score them by ear against the intended pronunciation (see `RIME_EVIDENCE.md`).
 4. Also expose a "repeat slower" control (`speedAlpha`) so a patient can ask for the dosage line again, more slowly, without re-reading the whole label.
+
 **A second controlled-delivery issue surfaced during testing, not anticipated in advance:** dosage lines like "Take one 75 microgram tablet" were audibly blending "one" and "75" together, sounding close to "175" — a real safety-relevant ambiguity for an audio-only reader. Fixed using Rime's custom pause markup (`pauseBetweenBrackets`, `<250> ,`) inserted after every "one" in the dosage fixtures, so the quantity and following number are always spoken as distinct units. See `RIME_EVIDENCE.md` for before/after notes.
+
 ## Architecture
 
 ```
@@ -46,7 +49,7 @@ Rime TTS (Mist v2) ──► MP3 audio ──► streamed back to browser ──
 | Pronunciation control | `phonemizeBetweenBrackets: true` + curly-brace phonetic strings from `fixtures/drug_names.json` |
 | Controlled delivery | `speedAlpha` (1.0 normal, 1.6 for "repeat slower") |
 
->> These have been audio-verified against reference pronunciations (Google search results / drugs.com) — 15/15 tuned pronunciations scored correct, vs. 12/15 for Rime's default. Full methodology and per-drug results in `RIME_EVIDENCE.md`.
+> These have been audio-verified against reference pronunciations (Google search results / drugs.com) — 15/15 tuned pronunciations scored correct, vs. 12/15 for Rime's default. Full methodology and per-drug results in `RIME_EVIDENCE.md`.
 
 ## Setup
 
@@ -82,5 +85,3 @@ This writes paired MP3s to `evidence/<drug>_default.mp3` and `evidence/<drug>_tu
 
 - Rime TTS API (`users.rime.ai`) — primary and required.
 - Browser `speechSynthesis` — visible fallback only, not used in the judged happy path.
-
-# dataforge_hacknova
